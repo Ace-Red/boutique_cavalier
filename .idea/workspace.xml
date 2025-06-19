@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d807b44d-9fdf-4019-83e1-da354e7008ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/boutiqueСavalier.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/creds.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/Boss.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/Dyon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/EQUILINE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/Effol-Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/Horsewear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/Kentucky-Dogwear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/Kingsland.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/LOGO-KASK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/Logo_site.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/Roeckl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/SAMSHIELD.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/TOMMY-HILFIGER-EQUESTRIAN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/acavallo-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/cavalleriaToscana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/ego7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/equestrian.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/eskadron.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/female_jump_wallpaper.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/freejump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/kentucky.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo-veredus.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo_circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/maximilian.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/prestige.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/sprenger.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/trolle-projects-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/trust.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dogCatalog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/horseCatalog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/riderCatalog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/sale.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/stableCatalog.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2yeBASJToFrYvgX9eEJpP0ApDBn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.about.html.executor": "Run",
+    "JavaScript Debug.base.html.executor": "Run",
+    "JavaScript Debug.home.html.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/nikitasakun/PycharmProjects/boutiqueСavalier/static/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="boutiqueСavalier" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102" />
+        <option value="bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d807b44d-9fdf-4019-83e1-da354e7008ab" name="Changes" comment="" />
+      <created>1750185014594</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750185014594</updated>
+      <workItem from="1750185017176" duration="3557000" />
+      <workItem from="1750188822613" duration="93000" />
+      <workItem from="1750224345800" duration="9870000" />
+      <workItem from="1750242329924" duration="17413000" />
+      <workItem from="1750274072583" duration="1977000" />
+      <workItem from="1750311890352" duration="20301000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.webp" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/boutiqueavalier$main.coverage" NAME="main Coverage Results" MODIFIED="1750340140450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

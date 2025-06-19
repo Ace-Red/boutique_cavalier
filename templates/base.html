@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boutique Cavalier</title>
+    <link rel="icon" type="image/png" href="static/images/logo_circle.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&display=swap"
+          rel="stylesheet">
+    <style>
+        /* 1) Делаём ссылку «контейнером» для линии */
+        .navbar-nav .nav-link {
+            position: relative; /* чтобы ::after позиционировался внутри ссылки */
+            display: inline-block; /* ширина = ширине текста */
+            padding-bottom: 0.25rem;
+        }
+
+        /* 2) Псевдоэлемент-линию: изначально width: 0 */
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0; /* прямо под текстом */
+            width: 0; /* прячем */
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        /* 3) На hover разиваем до полной ширины */
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .popular-header {
+            background-color: #5c3934; /* тёмный шоколад */
+            padding: 2rem 0; /* вертикальный паддинг */
+        }
+
+        .popular-header__title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.0rem;
+            color: #f6f1eb; /* бежево-кремовый */
+            margin: 0;
+            position: relative;
+            display: inline-block;
+            --line-width: 40px;
+        }
+
+        /* декоративная линия под заголовком */
+        .popular-header__title::after {
+            content: '';
+            display: block;
+            width: var(--line-width);
+            height: 4px;
+            background-color: #f6f1eb;
+            margin: 0.3rem auto 0;
+            transition: width 0.1s ease-out;
+        }
+
+        .brand-header {
+            background-color: #5c3934; /* тёмный шоколад */
+            padding: 2rem 0; /* вертикальный паддинг */
+        }
+
+        .brand-header__title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.0rem;
+            color: #f6f1eb; /* бежево-кремовый */
+            margin: 0;
+            position: relative;
+            display: inline-block;
+            --line-width: 40px;
+        }
+
+        /* декоративная линия под заголовком */
+        .brand-header__title::after {
+            content: '';
+            display: block;
+            width: var(--line-width);
+            height: 4px;
+            background-color: #f6f1eb;
+            margin: 0.3rem auto 0;
+            transition: width 0.1s ease-out;
+        }
+
+
+        body {
+            font-family: 'Cinzel', serif;
+            background-color: #f6f1eb;
+            color: #3b3a30;
+        }
+
+        .navbar-dark.bg-dark {
+            background-color: #5c3934 !important;
+        }
+
+
+        /* Общие настройки для левого и правого typewriter */
+        .typewriter-left,
+        .typewriter-right {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            display: inline-block;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+            animation-fill-mode: forwards;
+        }
+
+        /* Левый: печатает слева → направо */
+        .typewriter-left {
+            animation-name: typing-left;
+        }
+
+        @keyframes typing-left {
+            from {
+                width: 0;
+            }
+            to {
+                width: 35ch;
+            }
+            /* подберите ширину под текст меню */
+        }
+
+        /* Правый: печатает справа → налево */
+        .typewriter-right {
+            direction: rtl;
+            animation-name: typing-right;
+        }
+
+        @keyframes typing-right {
+            from {
+                width: 0;
+            }
+            to {
+                width: 35ch;
+            }
+            /* подберите ширину под текст меню */
+        }
+
+        /* Центр: ваш бренд */
+        .typewriter {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.3rem;
+            color: #f6f1eb;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing-center 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+        }
+
+        @keyframes typing-center {
+            from {
+                width: 0;
+            }
+            to {
+                width: 22.5ch;
+            }
+        }
+
+        .navbar-brand strong {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+
+        }
+
+
+        h4, h5 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+        }
+
+        footer {
+            background-color: #f2eee7;
+            color: #4b4b4b;
+        }
+
+        footer a {
+            color: #4b4b4b;
+        }
+
+    </style>
+</head>
+<body>
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Левое меню с typewriter -->
+            <ul class="navbar-nav d-flex flex-row typewriter-left text-white">
+                <li class="nav-item">
+                    <a class="nav-link px-3 text-white fs-5" href="/">Головне меню</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 text-white fs-5" href="/riderCatalog">Вершник</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 text-white fs-5" href="/horseCatalog">Кінь</a>
+                </li>
+            </ul>
+
+            <!-- Бренд по центру с типографикой -->
+            <a href="/" class="navbar-brand d-flex align-items-center mx-auto text-white">
+                <strong class="typewriter">
+                    <!-- Первая часть текста -->
+                    Boutique&nbsp;
+                    <!-- Ваш логотип -->
+                    <img src="{{ url_for('static', filename='images/Logo_site.svg') }}"
+                         alt="LOGO"
+                         style="height: 5.0rem;
+                         margin: 0 0.5rem;
+                         vertical-align: middle;">
+                    <!-- Вторая часть текста -->
+                    Cavalier
+                </strong>
+            </a>
+
+            <!-- Правое меню с обратным typewriter -->
+            <ul class="navbar-nav d-flex flex-row typewriter-right text-white">
+                <li class="nav-item">
+                    <a class="nav-link px-3 text-white fs-5" href="/sale">Знижки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 text-white fs-5" href="/stableCatalog">Стайня</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 text-white fs-5" href="/dogCatalog">Песики</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+{% block body %} {% endblock %}
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row container mx-auto">
+        <div class="col-12 col-md">
+            <small class="d-block mb-3">© Boutique Cavalier 2025</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Collections</h5>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="/about">About us</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Selle et accessoires</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Nouveautés</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Maison</h5>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">À propos</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Conditions</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Vie privée</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+<script>
+    (function () {
+        const title = document.querySelector('.popular-header__title');
+        const initial = 40;         // стартовая ширина в px
+        const maximum = 250;        // максимальная ширина, до которой растянем
+        const scrollEnd = 500;      // количество пикселей скролла, при котором линия достигнет максимума
+
+        window.addEventListener('scroll', () => {
+            // текущее смещение страницы вниз
+            const scrollY = window.scrollY;
+            // вычисляем отношение от 0 до 1
+            const ratio = Math.min(scrollY / scrollEnd, 1);
+            // новая ширина — от initial до maximum
+            const newWidth = initial + (maximum - initial) * ratio;
+            // записываем в CSS-переменную
+            title.style.setProperty('--line-width', `${newWidth}px`);
+        }, {passive: true});
+    })();
+
+    (function () {
+        const title2 = document.querySelector('.brand-header__title');
+        const headerBlock = document.querySelector('.brand-header');
+        const initial = 40;   // стартовая ширина в px
+        const maximum = 286;  // максимальная ширина
+        const range = 200;  // во сколько пикселей после появления растягиваем линию
+
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+
+            // точка, где верх блока с брендами появляется вверху окна:
+            const start = headerBlock.offsetTop - window.innerHeight;
+            // точка, где мы хотим уже достичь максимума:
+            const end = start + range;
+
+            let ratio;
+            if (y < start) {
+                ratio = 0;
+            } else {
+                ratio = Math.min((y - start) / (end - start), 1);
+            }
+
+            const brandWidth = initial + (maximum - initial) * ratio;
+            title2.style.setProperty('--line-width', `${brandWidth}px`);
+        }, {passive: true});
+    })();
+</script>
+</body>
+</html>

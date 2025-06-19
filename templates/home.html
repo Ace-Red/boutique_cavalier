@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+    /* ключевая анимация: из права → в центр + плавное проявление */
+    @keyframes slideInFromRight {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .brand-logo {
+        max-height: 80px; /* все лого одной высоты */
+        width: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    /* базовые параметры анимации */
+    .fade-slide-in {
+        opacity: 0; /* стартово скрыты */
+        animation-name: slideInFromRight;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+    }
+
+    .delay-1 {
+        animation-delay: 0.3s;
+    }
+
+    .delay-2 {
+        animation-delay: 0.6s;
+    }
+
+    .delay-3 {
+        animation-delay: 0.9s;
+    }
+</style>
+<main>
+    <section class="hero-section position-relative text-center text-white"
+             style="background-image: url('/static/images/female_jump_wallpaper.png'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background-color: rgba(0,0,0,0.45); z-index: 1;"></div>
+
+        <div class="container position-relative d-flex align-items-center justify-content-center h-100"
+             style="z-index: 2;">
+            <div class="row py-lg-5 w-100">
+                <div class="col-lg-6 col-md-8 mx-auto">
+
+                    <h1 class="fw-light fade-slide-in delay-1"
+                        style="font-family: 'Great Vibes', cursive; font-size: 3rem;">
+                        Welcome to the Club
+                    </h1>
+
+                    <p class="lead fade-slide-in delay-2"
+                       style="font-family: 'Cinzel', serif; color: #fff;">
+                        Європейські бренди за демократичними цінами — стиль і якість, доступні кожному шанувальнику
+                        кінного спорту. Кожен товар привезено безпосередньо з Європи, щоб ви могли насолоджуватися
+                        преміальним рівнем без зайвих націнок.
+                    </p>
+
+                    <p class="fade-slide-in delay-3">
+                        <a href="#" class="btn btn-light my-2"
+                           style="font-family: 'Cinzel', serif;">Товари для вершника</a>
+                        <a href="#" class="btn btn-outline-light my-2"
+                           style="font-family: 'Cinzel', serif;">Товари для коня</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="popular-header text-center mb-3">
+        <div class="container">
+            <h2 class="popular-header__title">
+                Популярні товари
+            </h2>
+        </div>
+    </header>
+    <div class="album py-3" style="background-color: #f6f1eb;">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                {% for record in records %}
+                <div class="col">
+                    <div class="card shadow-sm border-0" style="background-color: #fffaf4;">
+                        {% if record['Фото'] %}
+                        <img src="{{ record['Фото'] }}"
+                             class="bd-placeholder-img card-img-top"
+                             alt="{{ record['Назва'] }}"
+                             style="width: 100%; height: 225px; object-fit: contain; background-color: #ffffff;">
+                        {% else %}
+                        <svg aria-label="Placeholder: Thumbnail"
+                             class="bd-placeholder-img card-img-top"
+                             height="225" preserveAspectRatio="xMidYMid slice"
+                             role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                            <title>No Image</title>
+                            <rect width="100%" height="100%" fill="#b7a99a"></rect>
+                            <text x="50%" y="50%" fill="#f6f1eb" dy=".3em" text-anchor="middle">
+                                No Image
+                            </text>
+                        </svg>
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-family: 'Cinzel', serif;">
+                                {{ record['Назва'] }}
+                            </h5>
+                            <!-- Цена -->
+                            <p class="card-text">
+                                Ціна: {{ record['Цена'] }} €
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-sm btn-outline-dark">Переглянути</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <header class="brand-header text-center mb-3">
+        <div class="container">
+            <h2 class="brand-header__title">
+                Наші постачальники
+            </h2>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center align-items-center my-4">
+            <!-- Логотип Samshield -->
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/SAMSHIELD.webp') }}"
+                     alt="Samshield"
+                     class="brand-logo">
+            </div>
+            <!-- Логотип BOSS -->
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/Boss.webp') }}"
+                     alt="BOSS"
+                     class="brand-logo">
+            </div>
+            <!-- Логотип EGO7 -->
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/ego7.png') }}"
+                     alt="EGO7"
+                     class="brand-logo">
+            </div>
+            <!-- Логотип Cavalleria Toscana -->
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/cavalleriaToscana.png') }}"
+                     alt="Cavalleria Toscana"
+                     class="brand-logo">
+            </div>
+            <!-- Логотип kentucky -->
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/kentucky.svg') }}"
+                     alt="Kentucky"
+                     class="brand-logo">
+            </div>
+            <!-- Логотип Kingsland -->
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/Kingsland.png') }}"
+                     alt="Kingsland"
+                     class="brand-logo"
+                     style="max-height: 160px; width: auto;"
+                >
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/Kentucky-Dogwear.png') }}"
+                     alt="Kentucky-Dogwear"
+                     class="brand-logo">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/logo-veredus.webp') }}"
+                     alt="veredus"
+                     class="brand-logo"
+                     style="max-height: 160px; width: auto;">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/Dyon.png') }}"
+                     alt="Dyon"
+                     class="brand-logo"
+                     style="max-height: 110px; width: auto;">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/acavallo-logo.svg') }}"
+                     alt="acavallo"
+                     class="brand-logo">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/Effol-Logo.png') }}"
+                     alt="Effol"
+                     class="brand-logo">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/equestrian.png') }}"
+                     alt="Effol"
+                     class="brand-logo"
+                     style="max-height: 160px; width: auto;">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/EQUILINE.png') }}"
+                     alt="EQUILINE"
+                     class="brand-logo">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/freejump.png') }}"
+                     alt="freejump"
+                     class="brand-logo"
+                     style="max-height: 160px; width: auto;">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/maximilian.png') }}"
+                     alt="maximilian"
+                     class="brand-logo">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/prestige.png') }}"
+                     alt="prestige"
+                     class="brand-logo">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/LOGO-KASK.png') }}"
+                     alt="KASK"
+                     class="brand-logo"
+                     style="max-height: 160px; width: auto;">
+            </div>
+
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/Roeckl.png') }}"
+                     alt="Roeckl"
+                     class="brand-logo">
+            </div>
+
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/sprenger.svg') }}"
+                     alt="sprenger"
+                     class="brand-logo"
+                     style="max-height: 50px; width: auto;">
+            </div>
+
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/TOMMY-HILFIGER-EQUESTRIAN.png') }}"
+                     alt="TOMMY-HILFIGER-EQUESTRIAN"
+                     class="brand-logo">
+            </div>
+
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/trolle-projects-logo.svg') }}"
+                     alt="trolle"
+                     class="brand-logo"
+                     style="max-height: 120px; width: auto;">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/trust.png') }}"
+                     alt="trust"
+                     class="brand-logo">
+            </div>
+            <div class="col-auto mx-3">
+                <img src="{{ url_for('static', filename='images/eskadron.webp') }}"
+                     alt="eskadron"
+                     class="brand-logo"
+                     style="max-height: 110px; width: auto;">
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
